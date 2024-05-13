@@ -5,6 +5,7 @@
 
 html, body {
     background-color: rgb(235, 233, 233);
+    width: 100vw;
 }
 
 header {   
@@ -29,7 +30,16 @@ header {
 }
 
 .container {
-    padding-top: 92px;
+    padding-top: 123px;
+    margin: 0 16px;
+    font-family: "Roboto";
+
+}
+
+.prato-cardapio {
+    display: flex;
+    gap: 12px;
+    overflow-x: scroll;
 }
 
 .introducao-prato {
@@ -38,17 +48,117 @@ header {
     font-weight: 400;
 }
 
-.prato {
+.itens-cardapio {
     display: flex;
+    flex-direction: column;
     background-color: white;
-    justify-content: center;
     width: 172px;
+    height: 216px;
     border-radius: 9px;
+    padding: 0px 15px;
+    margin-top: 17px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+
 }
 
-.prato img {
+.selecionado {
+    box-shadow: 0px 0px 0px 5px rgba(50, 183, 47, 1) inset;
+}
+
+.itens-cardapio img {
     display: flex;
     justify-content: center;
+    object-fit: cover;
     width: 144px;
+    height: 87px;
+    margin-top: 18px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
 }
 
+.itens-cardapio img:hover {
+    transform: scale(1.1);
+}
+
+.itens-cardapio h1 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(51, 51, 51, 1);
+}
+
+.itens-cardapio h2 {
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(166, 166, 166, 1);
+}
+
+.itens-cardapio p {
+    margin-top: 9px;
+    margin-bottom: 13px;
+}
+
+.descricao-item-cardapio {
+    display: flex;
+    flex-direction: column;
+}
+
+.introducao-bebida {
+        font-family: "Righteous";
+        margin-top: 25px;
+        font-size: 26px;
+        font-weight: 400;
+}
+
+.bebida-cardapio {
+    display: flex;
+    gap: 12px;
+    overflow-x: scroll;
+}
+
+.introducao-sobremesa {
+    font-family: "Righteous";
+    margin-top: 25px;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.sobremesa-cardapio {
+    display: flex;
+    gap: 12px;
+    overflow-x: scroll;
+    margin-bottom: 110px;
+}
+
+.finalizar-footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 92px;
+    background-color: white;
+    border: none;
+    
+}
+
+.fechar-pedido-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgba(50, 183, 47, 1);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.fechar-pedido-btn:hover {
+    cursor: pointer;
+}
